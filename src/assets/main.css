@@ -19,6 +19,13 @@ body{
 .header-menu{
   background-color: #22252A;
 }
-.header-menu{
-  margin-top: 75px;
+.header-menu a:hover{
+  color: red !important;
+}
+#icon{
+  width: 22px;
+  height: 22px;
+}
+.carousel-item h5,p{
+  color: white;
 }
