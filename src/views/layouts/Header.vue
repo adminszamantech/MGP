@@ -38,6 +38,7 @@
                 <div class="profile">
                     <div class="user-icon">
                         <img :src="profile" alt="User Icon">
+
                     </div>
                     <div class="user-info">
                         <p class="username">Saurov</p>
