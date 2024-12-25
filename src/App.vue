@@ -9,17 +9,17 @@
 </script>
 
 <template>
-   <div class="wrapper">
-    <div class="container-fluid px-4">
+  <div class="wrapper">
+    <div class="container-fluid">
       <header>
-        <Header />
+        <Header/>
       </header>
-      <main>
-        <router-view></router-view>
+      <main class="mt-5">
+        <router-view />
       </main>
       <footer>
         <Footer />
       </footer>
     </div>
-   </div>
+  </div>
 </template>
