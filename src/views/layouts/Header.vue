@@ -6,7 +6,7 @@
   // variables
 </script>
 <template>
-  <nav class="navbar navbar-dark fixed-top">
+  <nav class="navbar navbar-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <img id="logo" :src="logo" alt="logo">
