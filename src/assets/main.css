@@ -9,7 +9,16 @@ body{
   background-color: #101213;
   color: white;
 }
-#profile-image{
+#profile{
   width: 33px;
   height: 33px;
+}
+.currency{
+  color: #FFE217;
+}
+.header-menu{
+  background-color: #22252A;
+}
+.header-menu{
+  margin-top: 75px;
 }

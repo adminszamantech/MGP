@@ -12,13 +12,15 @@
           <div class="container-fluid ">
             <a class="navbar-brand" href="#">
                 <img id="logo" :src="logo" alt="logo">
-            </a>
-                
-           <div class="d-flex justify-content-between align-items-center">
-                <div>
-                   <img src="" alt="">
-                   <div>
-                        
+            </a>  
+           <div class="d-flex  align-items-center">
+                <div class="mx-3 px-3 py-1 bg-dark rounded-pill">
+                   <div class="d-flex justify-content-between align-items-center gap-2">
+                        <img id="profile" :src="profile" alt="profile-image">
+                        <div>
+                            <small>displayname-1RcEP</small><br>
+                            <strong class="currency fs-md fw-bold">50000</strong>
+                        </div>
                    </div>
                 </div>
                 <div>
