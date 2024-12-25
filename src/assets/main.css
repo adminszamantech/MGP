@@ -2,3 +2,14 @@ body{
   margin: 0;
   padding: 0;
 }
+#logo{
+  width: 100px;
+}
+#offcanvasDarkNavbar{
+  background-color: #101213;
+  color: white;
+}
+#profile-image{
+  width: 33px;
+  height: 33px;
+}
