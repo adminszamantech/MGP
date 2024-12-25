@@ -1,13 +1,25 @@
 <script setup>
+  // imports
+  import Header from '@/views/layouts/Header.vue';
+  import Footer from '@/views/layouts/Footer.vue';
 
+  // variables
+
+  // methods
 </script>
 
 <template>
-  <header>
-   <h1 class="text-danger">Hello World</h1>
-  </header>
+   <div class="wrapper">
+    <div class="container-fluid px-4">
+      <header>
+        <Header />
+      </header>
+      <main>
+        <router-view></router-view>
+      </main>
+      <footer>
+        <Footer />
+      </footer>
+    </div>
+   </div>
 </template>
-
-<style scoped>
-
-</style>
