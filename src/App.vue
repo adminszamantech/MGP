@@ -4,6 +4,13 @@
   import Footer from '@/views/layouts/Footer.vue';
   import HeaderTop from '@/views/components/home/HeaderTop.vue';
   import Slider from '@/views/components/home/Slider.vue';
+  import MenuCard from '@/views/components/home/MenuCard.vue';
+
+
+
+
+
+
   // variables
 
   // methods
@@ -17,6 +24,8 @@
       </header>
       <HeaderTop/>
       <Slider/>
+      <MenuCard/>
+
       <main>
         <router-view />
       </main>
@@ -26,3 +35,7 @@
     </div>
   </div>
 </template>
+
+<style scoped>
+
+</style>
