@@ -8,11 +8,17 @@ const routes = [
     component: () => import("@/views/templates/home/Home.vue"),
   },
 
-  // {
-  //   path: '/about',
-  //   name: 'About',
-  //   component: () => import("@/views/templates/about/AboutUs.vue"),
-  // },
+  {
+    path: '/deposit',
+    name: 'Deposit',
+    component: () => import("@/views/templates/deposit/DepositPage.vue"),
+  },
+
+  {
+    path: '/withdraw',
+    name: 'Withdraw',
+    component: () => import("@/views/templates/withdraw/WithdrawPage.vue"),
+  },
 
   // {
   //   path: '/login',

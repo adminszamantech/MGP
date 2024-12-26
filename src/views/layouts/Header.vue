@@ -1,16 +1,17 @@
 <script setup>
-  // imports
-  import logo from '@/assets/images/logo/logo.png'
-  import profile from '@/assets/images/profile/alia.png'
 
-  // variables
+import logo from '@/assets/images/logo/logo.png';
+import profile from '@/assets/images/profile/alia.png';
+
+
 </script>
+
 <template>
   <nav class="navbar navbar-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
+      <router-link class="navbar-brand" to="/">
         <img id="logo" :src="logo" alt="logo">
-      </a>
+      </router-link>
 
       <div class="d-flex  align-items-center">
         <div class="mx-3 px-3 py-1 bg-dark rounded-pill">
@@ -50,7 +51,7 @@
                     </div>
                 </div>
                 <div class="add-cash">
-                    <a href="#" class="offcanvas-title" id="offcanvasDarkNavbarLabel"><i class="bi bi-cash me-2"></i>Add Cash</a>
+                    <a to="#" class="offcanvas-title" id="offcanvasDarkNavbarLabel"><i class="bi bi-cash me-2"></i>Add Cash</a>
                 </div>
               
               <button
@@ -62,38 +63,50 @@
             </div>
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <router-link class="nav-link active" aria-current="page" href="#"><i class="bi bi-house-door-fill me-2"></i>Home</router-link>
+                <li class="nav-item" data-bs-dismiss="offcanvas">
+                  <router-link class="nav-link active" aria-current="page" to="/">
+                    <i class="bi bi-house-door-fill me-2"></i>Home</router-link>
                 </li>
-                <li class="nav-item">
-                  <router-link class="nav-link active" aria-current="page" href="#"><i class="bi bi-cash me-2"></i>MY WALLET</router-link>
+                <li class="nav-item" data-bs-dismiss="offcanvas">
+                  <router-link class="nav-link active" aria-current="page" to="/" >
+                    <i class="bi bi-cash me-2"></i>MY WALLET</router-link>
                 </li>
-                <li class="nav-item">
-                  <router-link class="nav-link active" aria-current="page" href="#"><i class="bi bi-cash me-2"></i>DEPOSIT</router-link>
+                <li class="nav-item" data-bs-dismiss="offcanvas">
+                  <router-link class="nav-link active" aria-current="page" to="/deposit">
+                    <i class="bi bi-cash me-2"></i>DEPOSIT
+                  </router-link>
                 </li>
-                <li class="nav-item">
-                  <router-link class="nav-link active" aria-current="page" href="#"><i class="bi bi-cash me-2"></i>WITHDRAW</router-link>
+                <li class="nav-item" data-bs-dismiss="offcanvas">
+                  <router-link class="nav-link active" aria-current="page" to="/withdraw">
+                    <i class="bi bi-cash me-2"></i>WITHDRAW</router-link>
                 </li>
-                <li class="nav-item">
-                  <router-link class="nav-link active" aria-current="page" href="#"><i class="bi bi-cash me-2"></i>BANK ACCOUNTs</router-link>
+                <li class="nav-item" data-bs-dismiss="offcanvas">
+                  <router-link class="nav-link active" aria-current="page" to="/">
+                    <i class="bi bi-cash me-2"></i>BANK ACCOUNTs</router-link>
                 </li>
-                <li class="nav-item">
-                  <router-link class="nav-link active" aria-current="page" href="#"><i class="bi bi-cash me-2"></i>TRANSACTIONS</router-link>
+                <li class="nav-item" data-bs-dismiss="offcanvas">
+                  <router-link class="nav-link active" aria-current="page" to="/">
+                    <i class="bi bi-cash me-2"></i>TRANSACTIONS</router-link>
                 </li>
-                <li class="nav-item">
-                  <router-link class="nav-link active" aria-current="page" href="#"><i class="bi bi-cash me-2"></i>KYC</router-link>
+                <li class="nav-item" data-bs-dismiss="offcanvas">
+                  <router-link class="nav-link active" aria-current="page" to="/">
+                    <i class="bi bi-cash me-2"></i>KYC</router-link>
                 </li>
-                <li class="nav-item">
-                  <router-link class="nav-link active" aria-current="page" href="#"><i class="bi bi-cash me-2"></i>TDS</router-link>
+                <li class="nav-item" data-bs-dismiss="offcanvas">
+                  <router-link class="nav-link active" aria-current="page" to="/">
+                    <i class="bi bi-cash me-2"></i>TDS</router-link>
                 </li>
-                <li class="nav-item">
-                  <router-link class="nav-link active" aria-current="page" href="#"><i class="bi bi-cash me-2"></i>MY invitation</router-link>
+                <li class="nav-item" data-bs-dismiss="offcanvas">
+                  <router-link class="nav-link active" aria-current="page" to="/">
+                    <i class="bi bi-cash me-2"></i>MY invitation</router-link>
                 </li>
-                <li class="nav-item">
-                  <router-link class="nav-link active" aria-current="page" href="#"><i class="bi bi-cash me-2"></i>promotions</router-link>
+                <li class="nav-item" data-bs-dismiss="offcanvas">
+                  <router-link class="nav-link active" aria-current="page" to="/">
+                    <i class="bi bi-cash me-2"></i>promotions</router-link>
                 </li>
-                <li class="nav-item">
-                  <router-link class="nav-link active" aria-current="page" href="#"><i class="bi bi-cash me-2"></i>Games History</router-link>
+                <li class="nav-item" data-bs-dismiss="offcanvas">
+                  <router-link class="nav-link active" aria-current="page" to="/">
+                    <i class="bi bi-cash me-2"></i>Games History</router-link>
                 </li>
               </ul>
             </div>
