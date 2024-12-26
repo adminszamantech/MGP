@@ -3,6 +3,7 @@
   import Header from '@/views/layouts/Header.vue';
   import Footer from '@/views/layouts/Footer.vue';
   import HeaderTop from '@/views/layouts/HeaderTop.vue';
+  import MenuCard from '@/views/components/home/MenuCard.vue';
   // variables
 
   // methods
@@ -15,7 +16,7 @@
         <Header/>
         <HeaderTop/>
       </header>
-
+      <MenuCard/>
       <main>
           <router-view />
       </main>
