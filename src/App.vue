@@ -3,6 +3,8 @@
   import Header from '@/views/layouts/Header.vue';
   import Footer from '@/views/layouts/Footer.vue';
   import HeaderTop from '@/views/layouts/HeaderTop.vue';
+
+
   // variables
 
   // methods
@@ -25,3 +27,7 @@
     </div>
   </div>
 </template>
+
+<style scoped>
+
+</style>

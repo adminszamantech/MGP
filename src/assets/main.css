@@ -30,6 +30,8 @@ body{
 .carousel-item h5,p{
   color: white;
 }
+
+
 .primeColor{
   color: #c72b2c;
 }
@@ -51,3 +53,37 @@ body a {
 .box-sub-title{
   font-size: 22px;
 }
+
+
+
+.game-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #101213;
+  text-decoration: none;
+  color: white;
+  font-weight:600;
+  border-radius: 15px;
+  padding: 0px 10px 5px 10px;
+}
+.skillgames:hover{
+  background-color: #22252A;
+}
+.nav-item{
+  margin-top: 10px;
+}
+.nav-link{
+  background-color: #22252A !important;
+  color:white !important;
+  padding: 10px 35px !important;
+}
+.nav-link:hover{
+  background-color: #C72B2C !important;
+  padding: 10px 35px I !important;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  background-color: #C72B2C !important;
+  padding: 10px 35px;
+}
+
