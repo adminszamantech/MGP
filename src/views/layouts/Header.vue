@@ -85,11 +85,11 @@ import profile from '@/assets/images/profile/alia.png';
                     <i class="bi bi-cash me-2"></i>BANK ACCOUNTs</router-link>
                 </li>
                 <li class="nav-item" data-bs-dismiss="offcanvas">
-                  <router-link class="nav-link active" aria-current="page" to="/">
+                  <router-link class="nav-link active" aria-current="page" to="/transections">
                     <i class="bi bi-cash me-2"></i>TRANSACTIONS</router-link>
                 </li>
                 <li class="nav-item" data-bs-dismiss="offcanvas">
-                  <router-link class="nav-link active" aria-current="page" to="/">
+                  <router-link class="nav-link active" aria-current="page" to="/kyc">
                     <i class="bi bi-cash me-2"></i>KYC</router-link>
                 </li>
                 <li class="nav-item" data-bs-dismiss="offcanvas">
@@ -97,7 +97,7 @@ import profile from '@/assets/images/profile/alia.png';
                     <i class="bi bi-cash me-2"></i>TDS</router-link>
                 </li>
                 <li class="nav-item" data-bs-dismiss="offcanvas">
-                  <router-link class="nav-link active" aria-current="page" to="/">
+                  <router-link class="nav-link active" aria-current="page" to="/my-invitation">
                     <i class="bi bi-cash me-2"></i>MY invitation</router-link>
                 </li>
                 <li class="nav-item" data-bs-dismiss="offcanvas">
@@ -105,7 +105,7 @@ import profile from '@/assets/images/profile/alia.png';
                     <i class="bi bi-cash me-2"></i>promotions</router-link>
                 </li>
                 <li class="nav-item" data-bs-dismiss="offcanvas">
-                  <router-link class="nav-link active" aria-current="page" to="/">
+                  <router-link class="nav-link active" aria-current="page" to="/game-history">
                     <i class="bi bi-cash me-2"></i>Games History</router-link>
                 </li>
               </ul>

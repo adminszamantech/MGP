@@ -1,0 +1,33 @@
+{
+    "draw": 1,
+    "recordsTotal": 10,
+    "recordsFiltered": 10,
+    "data": [
+      {
+        "date": "Airi Satou",
+        "time": "Accountant",
+        "game": "Tokyo",
+        "opening_balance": "5407",
+        "amount": "2008/11/28",
+        "c_balance": "$162,700"
+      },
+      {
+        "date": "Angelica Ramos",
+        "time": "Chief Executive Officer (CEO)",
+        "game": "London",
+        "opening_balance": "5797",
+        "amount": "2009/10/09",
+        "c_balance": "$1,200,000"
+      },
+      {
+        "date": "Ashton Cox",
+        "time": "Junior Technical Author",
+        "game": "San Francisco",
+        "opening_balance": "1562",
+        "amount": "2009/01/12",
+        "c_balance": "$86,000"
+      }
+
+    ]
+  }
+  

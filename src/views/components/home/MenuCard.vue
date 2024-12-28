@@ -92,7 +92,6 @@
 </script>
 <template>
     <div class="row">
-
         <div class="col-12">
             <div class="card-slider">
                 <div class="card bg-dark text-white text-center py-2" v-for="(item, index) in items" :key="index">
