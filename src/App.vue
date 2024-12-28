@@ -2,13 +2,7 @@
   // imports
   import Header from '@/views/layouts/Header.vue';
   import Footer from '@/views/layouts/Footer.vue';
-  import HeaderTop from '@/views/components/home/HeaderTop.vue';
-  import Slider from '@/views/components/home/Slider.vue';
-  import MenuCard from '@/views/components/home/MenuCard.vue';
-
-
-
-
+  import HeaderTop from '@/views/layouts/HeaderTop.vue';
 
 
   // variables
@@ -21,11 +15,8 @@
     <div class="container-fluid">
       <header>
         <Header/>
+        <HeaderTop/>
       </header>
-      <HeaderTop/>
-      <Slider/>
-      <MenuCard/>
-
       <main>
         <router-view />
       </main>
