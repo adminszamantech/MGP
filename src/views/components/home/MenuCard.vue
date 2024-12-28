@@ -121,6 +121,21 @@
 </template>
 
 <style scoped>
-
+.nav-item{
+  margin-top: 10px;
+}
+.nav-link{
+  background-color: #22252A !important;
+  color:white !important;
+  padding: 10px 35px !important;
+}
+.nav-link:hover{
+  background-color: #C72B2C !important;
+  padding: 10px 35px I !important;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  background-color: #C72B2C !important;
+  padding: 10px 35px;
+}
 
 </style>
