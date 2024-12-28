@@ -1,6 +1,5 @@
 <script setup>
 // imports
-    import SkillGameSLider from '@/views/components/home/SkillGameSLider.vue';
     import selectAll from '@/assets/images/icon/select-all.png';
     import billiard from '@/assets/images/icon/billiard.png';
     import airplane from '@/assets/images/icon/airplane.png';
@@ -10,132 +9,123 @@
     import moneytransfer from '@/assets/images/icon/money-transfer.png';
     import Esportss2w from '@/assets/images/icon/Esports_s2w.webp';
     import menuimg from '@/assets/images/icon/menu.png';
+    import NavTabItem from '@/views/components/navTab/NavTabItem.vue';
 
   // variables
+    import { onMounted } from 'vue';
+    import $ from 'jquery';
+    import 'slick-carousel';
 
+    const items = [
+    {
+        image: selectAll,
+        text: "DISCOVER",
+    },
+    {
+        image: billiard,
+        text: "TABLE GAMES",
+    },
+    {
+        image: airplane,
+        text: "CRASH",
+    },
+    {
+        image: roulette,
+        text: "CASINO",
+    },
+    {
+        image: camera,
+        text: "LIVE CASINO",
+    },
+    {
+        image: roulette,
+        text: "ROULETTE",
+    },
+    {
+        image: slotmachine,
+        text: "SLOT",
+    },
+    {
+        image: moneytransfer,
+        text: "INSTANT WIN",
+    },
+    {
+        image: Esportss2w,
+        text: "E SPORTS",
+    },
+    {
+        image: menuimg,
+        text: "OTHERS",
+    },
+    
+    ];
+    onMounted(() => {
+        $('.card-slider').slick({
+            dots: false,
+            arrows: true,
+            slidesToShow: 9,
+            autoplay: true,
+            infinite: false,
+            responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 800,
+                settings: {
+                slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                slidesToShow: 1
+                }
+            }
+            ]
+        });
+    });
   // methods
 </script>
 <template>
     <div class="row">
-     
-        <div class="col-12 d-lg-none d-xl-block">
-            <ul class="nav nav-pills mb-3 d-flex justify-content-between" id="pills-tab" role="tablist">
-                <li class="nav-item text-center nav-item-active" role="presentation">
-                    <button class="nav-link" id="pills-discover-tab" data-bs-toggle="pill" data-bs-target="#pills-discover" type="button" role="tab" aria-controls="pills-discover" aria-selected="true">
-                        <img id="icon" class="mb-1" :src="selectAll" alt="select-all"><br>
-                        DISCOVER
-                    </button>
-                </li>
-                <li class="nav-item text-center" role="presentation">
-                    
-                    <button class="nav-link" id="pills-tablegame-tab" data-bs-toggle="pill" data-bs-target="#pills-tablegame" type="button" role="tab" aria-controls="pills-tablegame" aria-selected="false">
-                        <img id="icon" class="mb-1" :src="billiard" alt="billiard"><br>
-                        TABLE GAMES
-                    </button>
-                </li>
-                <li class="nav-item text-center" role="presentation">
-                    <button class="nav-link" id="pills-crash-tab" data-bs-toggle="pill" data-bs-target="#pills-crash" type="button" role="tab" aria-controls="pills-crash" aria-selected="false">
-                        <img id="icon" class="mb-1" :src="airplane" alt="airplane"><br>
-                        CRASH
-                    </button>
-                </li>
-                <li class="nav-item text-center" role="presentation">
-                    
-                    <button class="nav-link" id="pills-casino-tab" data-bs-toggle="pill" data-bs-target="#pills-casino" type="button" role="tab" aria-controls="pills-casino" aria-selected="true">
-                        <img id="icon" class="mb-1" :src="roulette" alt="roulette"><br>
-                        CASINO
-                    </button>
-                </li>
-                <li class="nav-item text-center" role="presentation">
-                    <button class="nav-link" id="pills-live-casino-tab" data-bs-toggle="pill" data-bs-target="#pills-live-casino" type="button" role="tab" aria-controls="pills-live-casino" aria-selected="false">
-                        <img id="icon" class="mb-1" :src="camera" alt="video-camera"><br>
-                        LIVE CASINO
-                    </button>
-                </li>
-                <li class="nav-item text-center" role="presentation">
-                    <button class="nav-link" id="pills-roulette-tab" data-bs-toggle="pill" data-bs-target="#pills-roulette" type="button" role="tab" aria-controls="pills-roulette" aria-selected="false">
-                        <img id="icon" class="mb-1" :src="roulette" alt="roulette"><br>
-                        ROULETTE
-                    </button>
-                </li>
-                <li class="nav-item text-center" role="presentation">
-                    <button class="nav-link" id="pills-slot-tab" data-bs-toggle="pill" data-bs-target="#pills-slot" type="button" role="tab" aria-controls="pills-slot" aria-selected="true">
-                        <img id="icon" class="mb-1" :src="slotmachine" alt="slot-machine"><br>
-                        SLOT
-                    </button>
-                </li>
-                <li class="nav-item text-center" role="presentation">
-                    <button class="nav-link" id="pills-instant-tab" data-bs-toggle="pill" data-bs-target="#pills-instant" type="button" role="tab" aria-controls="pills-instant" aria-selected="false">
-                        <img id="icon" class="mb-1" :src="moneytransfer" alt="money-transfer"><br>
-                        INSTANT WIN
-                    </button>
-                </li>
-                <li class="nav-item text-center" role="presentation">
-                    <button class="nav-link" id="pills-esport-tab" data-bs-toggle="pill" data-bs-target="#pills-esport" type="button" role="tab" aria-controls="pills-esport" aria-selected="false">
-                        <img id="icon" class="mb-1" :src="Esportss2w" alt="Esport-ss2w"><br>
-                        ESPORTS
-                    </button>
-                </li>
-                <li class="nav-item text-center" role="presentation">
-                    <button class="nav-link" id="pills-other-tab" data-bs-toggle="pill" data-bs-target="#pills-other" type="button" role="tab" aria-controls="pills-other" aria-selected="false">
-                        <img id="icon" class="mb-1" :src="menuimg" alt="menu-img"><br>
-                        OTHERS
-                    </button>
-                </li>
-            </ul>
-            <div class="tab-content" id="pills-tabContent">
-                <div class="tab-pane fade show" id="pills-discover" role="tabpanel" aria-labelledby="pills-discover-tab" tabindex="0">
-                    <SkillGameSLider/>
-                </div>
-                <div class="tab-pane fade" id="pills-tablegame" role="tabpanel" aria-labelledby="pills-tablegame-tab" tabindex="0">
-                    Table Game
-                </div>
-                <div class="tab-pane fade" id="pills-crash" role="tabpanel" aria-labelledby="pills-crash-tab" tabindex="0">
-                    Crash
-                </div>
-                <div class="tab-pane fade show" id="pills-casino" role="tabpanel" aria-labelledby="pills-casino-tab" tabindex="0">
-                    Casino
-                </div>
-                <div class="tab-pane fade" id="pills-live-casino" role="tabpanel" aria-labelledby="pills-live-casino-tab" tabindex="0">
-                    Live Casino
-                </div>
-                <div class="tab-pane fade" id="pills-roulette" role="tabpanel" aria-labelledby="pills-roulette-tab" tabindex="0">
-                    Roulette
-                </div>
-                <div class="tab-pane fade" id="pills-slot" role="tabpanel" aria-labelledby="pills-slot-tab" tabindex="0">
-                    Slot
-                </div>
-                <div class="tab-pane fade show" id="pills-instant" role="tabpanel" aria-labelledby="pills-instant-tab" tabindex="0">
-                    Instant
-                </div>
-                <div class="tab-pane fade" id="pills-esport" role="tabpanel" aria-labelledby="pills-esport-tab" tabindex="0">
-                    Esport
-                </div>
-                <div class="tab-pane fade" id="pills-other" role="tabpanel" aria-labelledby="pills-other-tab" tabindex="0">
-                    Other
+        <div class="col-12">
+            <div class="card-slider">
+                <div class="card bg-dark text-white text-center py-2" v-for="(item, index) in items" :key="index">
+                    <div class="card-body menu-card">
+                        <img id="icon" class="" :src="item.image" alt="select-all">
+                    </div>
+                    {{ item.text }}
                 </div>
             </div>
         </div>
+        <div class="col-12">
+            <NavTabItem/>
+        </div>
+        
         
     </div>
 </template>
 
 <style scoped>
-.nav-item{
-  margin-top: 10px;
+.menu-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 0px;
 }
-.nav-link{
-  background-color: #22252A !important;
-  color:white !important;
-  padding: 10px 35px !important;
+.card-slider .card {
+    transition: background 0.3s ease;
 }
-.nav-link:hover{
-  background-color: #C72B2C !important;
-  padding: 10px 35px I !important;
+.card-slider .card:hover {
+    background: #C72B2C !important;
+    cursor: pointer;
 }
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-  background-color: #C72B2C !important;
-  padding: 10px 35px;
+.card-active{
+    background: #C72B2C !important;
+    cursor: pointer;
 }
-
 </style>

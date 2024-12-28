@@ -1,5 +1,7 @@
 <script setup>
 // imports
+    import { onMounted } from 'vue';
+    import { Carousel } from 'bootstrap';
     import slider1 from '@/assets/images/slider/slider-1.jpg';
     import slider2 from '@/assets/images/slider/slider-2.jpg';
     import slider3 from '@/assets/images/slider/slider-3.jpg';
@@ -7,7 +9,13 @@
     import slider5 from '@/assets/images/slider/slider-5.jpg';
     import slider6 from '@/assets/images/slider/slider-6.jpg';
   // variables
-
+    onMounted(() => {
+    const myCarousel = new Carousel(document.getElementById('carouselExampleDark'), {
+        interval: 2000,
+        ride: 'carousel'
+    });
+    myCarousel.cycle();
+    });
   // methods
 </script>
 <template>
