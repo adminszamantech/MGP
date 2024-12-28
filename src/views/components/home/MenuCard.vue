@@ -18,7 +18,7 @@
 <template>
     <div class="row">
      
-        <div class="col-12 d-lg-none d-xl-block">
+        <div class="col-12">
             <ul class="nav nav-pills mb-3 d-flex justify-content-between" id="pills-tab" role="tablist">
                 <li class="nav-item text-center nav-item-active" role="presentation">
                     <button class="nav-link" id="pills-discover-tab" data-bs-toggle="pill" data-bs-target="#pills-discover" type="button" role="tab" aria-controls="pills-discover" aria-selected="true">
