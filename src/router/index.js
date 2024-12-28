@@ -20,6 +20,28 @@ const routes = [
     component: () => import("@/views/templates/withdraw/WithdrawPage.vue"),
   },
 
+  {
+    path: '/transections',
+    name: 'Transections',
+    component: () => import("@/views/templates/transections/TransectionsPage.vue"),
+  },
+
+  {
+    path: '/kyc',
+    name: 'KYC',
+    component: () => import("@/views/templates/kyc/kYCpage.vue"),
+  },
+  {
+    path: '/game-history',
+    name: 'GameHistory',
+    component: () => import("@/views/templates/game_history/GameHistoryPage.vue"),
+  },
+  {
+    path: '/my-invitation',
+    name: 'MyInvitation',
+    component: () => import("@/views/templates/invitation/MyInvitationPage.vue"),
+  },
+
   // {
   //   path: '/login',
   //   name: 'Login',

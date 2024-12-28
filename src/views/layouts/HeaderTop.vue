@@ -16,39 +16,39 @@
         <ul class="list-unstyled d-flex justify-content-between align-items-center py-3">
             <li class="d-flex align-items-center gap-2">
                 <img id="icon" :src="chip" alt="chip">
-                <a class="text-decoration-none text-white fs-6 " href="">
+                <router-link class="text-decoration-none text-white fs-6 " to="/">
                     LUDO
-                </a>
+                </router-link>
             </li>
             <li class="d-flex align-items-center gap-2">
                 <img id="icon" :src="symbol" alt="symbol">
-                <a class="text-decoration-none text-white fs-6 " href="">
+                <router-link class="text-decoration-none text-white fs-6 " to="/">
                     RUMMY
-                </a>
+                </router-link>
             </li>
             <li class="d-flex align-items-center gap-2">
                 <img id="icon" :src="chip" alt="chip">
-                <a class="text-decoration-none text-white fs-6 " href="">
+                <router-link class="text-decoration-none text-white fs-6 " to="/">
                     POCKER
-                </a>
+                </router-link>
             </li>
             <li class="d-flex align-items-center gap-2">
                 <img id="icon" :src="playing" alt="playing">
-                <a class="text-decoration-none text-white fs-6 " href="">
+                <router-link class="text-decoration-none text-white fs-6 " to="/">
                     TEEN PATTI
-                </a>
+                </router-link>
             </li>
             <li class="d-flex align-items-center gap-2">
                 <img id="icon" :src="maintenance" alt="maintenance">
-                <a class="text-decoration-none text-white fs-6 " href="">
+                <a class="text-decoration-none text-white fs-6 " to="/">
                     AVIATOR
                 </a>
             </li>
             <li class="d-flex align-items-center gap-2">
                 <img id="icon" :src="poker" alt="poker">
-                <a class="text-decoration-none text-white fs-6 " href="">
+                <router-link class="text-decoration-none text-white fs-6 " to="/">
                     LIVE CASSINO
-                </a>
+                </router-link>
             </li>
         </ul>
         </div>
