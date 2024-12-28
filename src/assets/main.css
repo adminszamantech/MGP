@@ -71,3 +71,46 @@ body a {
   background-color: #22252A;
 }
 
+.slick-prev{
+  left: 0px !important;
+  z-index: 10 !important;
+}
+.slick-next{
+  right: 10px !important;
+  z-index: 10 !important;
+}
+.slick-slide{
+  padding-right: 10px;
+}
+
+
+/* Media query for responsive */
+@media (max-width: 540px) {
+  #logo {
+      width: 70px !important;
+  }
+  .profile-card-wrap{
+      #profile-card{
+        padding:0px 8px 0px 8px !important;
+      }
+      #profile-content{
+        line-height: 17px;
+      }
+      small{
+        font-size: 10px;
+      }
+      strong{
+        font-size: 12px;
+      }
+    }
+  }
+  .navbar-toggler{
+    padding: 0px 5px !important;
+    margin: 0;
+    .navbar-toggler-icon{
+      width: 20px;
+  } 
+ 
+ 
+  
+}
