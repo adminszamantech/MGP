@@ -40,7 +40,7 @@
   
           <!-- Referral Link -->
           <div class="mt-3">
-            <p>Share this link with others to earn rewards:</p>
+            <p style="color: gray;">Share this link with others to earn rewards:</p>
             <input
               type="text"
               class="form-control"
@@ -135,6 +135,7 @@
     font-size: 18px;
     font-weight: 500;
     margin-bottom: 15px;
+    color: gray;
   }
   
   .input-group {

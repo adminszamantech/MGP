@@ -31,7 +31,6 @@ body{
   color: white;
 }
 
-
 .primeColor{
   color: #c72b2c;
 }
@@ -102,6 +101,7 @@ body a {
         font-size: 12px;
       }
     }
+
     .navbar-toggler{
       padding: 0px 5px !important;
       margin: 0;
@@ -126,5 +126,4 @@ body a {
       }
     }
 }
-  
 

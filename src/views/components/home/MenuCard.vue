@@ -109,10 +109,11 @@
         <div class="col-12">
             <NavTabItem/>
         </div>
+
         <div class="col-12">
             <GamesProvider/>
         </div>
-        
+
     </div>
 </template>
 
