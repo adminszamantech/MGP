@@ -1,67 +1,22 @@
 <script setup>
-// imports
-    import rummy from '@/assets/images/slider/rummy.webp';
-    import ludo from '@/assets/images/slider/ludo.webp';
-    import callbreak from '@/assets/images/slider/call-break.webp';
-    import tambola from '@/assets/images/slider/tambola.webp';
-    import poker from '@/assets/images/slider/poker.webp';
-  // variables
-  const items = [
-        {
-            image: rummy,
-            text:'Rummy'
-        },
-        {
-            image: ludo,
-            text:'Ludo'
-        },
-        {
-            image: callbreak,
-            text:'Call Break'
-        },
-        {
-            image: tambola,
-            text:'Tambola'
-        },
-        {
-            image: poker,
-            text:'Poker'
-        },
-        {
-            image: rummy,
-            text:'Rummy'
-        },
-        {
-            image: ludo,
-            text:'Ludo'
-        },
-        {
-            image: callbreak,
-            text:'Call Break'
-        },
-        {
-            image: tambola,
-            text:'Tambola'
-        },
-        {
-            image: poker,
-            text:'Poker'
-        },
-        
-    
-    ];
-  // methods
+    // imports
+    import { gameItems } from '@/data/gameItems';
+    // variables
+    const {categoryId} = defineProps({
+        categoryId: Number
+    })
+
+    // methods
+   
 </script>
 <template>
     <div class="row ">
         <hr class="my-4">
-
-        <h5 class="text-white mb-3">Skill Games</h5>
-       
-        <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2" v-for="(item, index) in items" :key="index">
+        <h5 class="text-white mb-3">Skill Games {{ categoryId }}</h5>
+        <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2" v-for="(item, id) in gameItems.items" :key="id">
             <div class="card bg-dark rounded-4 mb-3 animate__animated animate__zoomIn">
                 <div class="card-image-wrapper position-relative">
-                    <img class="card-img-top w-100 rounded-4 img-fluid" :src="item.image" :alt="item.image">
+                    <img class="card-img-top w-100 rounded-4 img-fluid" :src="item.image" :alt="item.text">
                     <div class="overlay d-flex align-items-center justify-content-center">
                         <button class="play-btn btn btn-default">Play</button>
                     </div>

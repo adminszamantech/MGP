@@ -1,59 +1,43 @@
 <script setup>
-// imports
+    // imports
     import { onMounted } from 'vue';
     import { Carousel } from 'bootstrap';
-    import slider1 from '@/assets/images/slider/slider-1.jpg';
-    import slider2 from '@/assets/images/slider/slider-2.jpg';
-    import slider3 from '@/assets/images/slider/slider-3.jpg';
-    import slider4 from '@/assets/images/slider/slider-4.jpg';
-    import slider5 from '@/assets/images/slider/slider-5.jpg';
-    import slider6 from '@/assets/images/slider/slider-6.jpg';
-  // variables
+    import { getSliders } from '@/data/getSlider';
+   
+    // variables
     onMounted(() => {
-    const myCarousel = new Carousel(document.getElementById('carouselExampleDark'), {
-        interval: 2000,
-        ride: 'carousel'
+        const myCarousel = new Carousel(document.getElementById('carouselExampleDark'), {
+            interval: 2000,
+            ride: 'carousel'
+        });
+        myCarousel.cycle();
     });
-    myCarousel.cycle();
-    });
-  // methods
+    // methods
 </script>
 <template>
     <div class="row my-3">
         <div class="col-md-12">
             <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-            <div class="carousel-indicators d-none d-sm-flex justify-content-center">
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="bg-white active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" class="bg-white" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" class="bg-white" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" class="bg-white" aria-label="Slide 4"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" class="bg-white" aria-label="Slide 5"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" class="bg-white" aria-label="Slide 6"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="2000">
-                    <img :src="slider1" class="d-block w-100 rounded" alt="slider1">
+                <div class="carousel-indicators d-none d-sm-flex justify-content-center">
+                    <button
+                        v-for="(slider, id) in getSliders.items"
+                        :key="id"
+                        :data-bs-target="'#carouselExampleDark'"
+                        :data-bs-slide-to="id"
+                        :class="{'bg-white': true, 'active': id === 1}"
+                        :aria-label="'Slide ' + (id + 1)"
+                    ></button>
                 </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                    <img :src="slider2" class="d-block w-100 rounded" alt="slider2">
+                <div class="carousel-inner">
+                        <div
+                            v-for="(slider, id) in getSliders.items"
+                            :key="id"
+                            :class="['carousel-item', { active: id === 1 }]"
+                            data-bs-interval="2000"
+                        >
+                        <img :src="slider.image" class="d-block w-100 rounded" :alt="'slider' + (id + 1)">
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img :src="slider3" class="d-block w-100 rounded" alt="slider3">
-                  
-                </div>
-                <div class="carousel-item">
-                    <img :src="slider4" class="d-block w-100 rounded" alt="slider4">
-                    
-                </div>
-                <div class="carousel-item">
-                    <img :src="slider5" class="d-block w-100 rounded" alt="slider5">
-                   
-                </div>
-                <div class="carousel-item">
-                    <img :src="slider6" class="d-block w-100 rounded" alt="slider6">
-                  
-                </div>
-            </div>
             </div>
         </div>
     </div>

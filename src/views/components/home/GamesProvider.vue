@@ -1,101 +1,63 @@
 <script setup>
-// imports
-    import rummy from '@/assets/images/slider/rummy.webp';
-    import ludo from '@/assets/images/slider/ludo.webp';
-    import callbreak from '@/assets/images/slider/call-break.webp';
-    import tambola from '@/assets/images/slider/tambola.webp';
-    import poker from '@/assets/images/slider/poker.webp';
+    // imports
+    import { gameProvider } from '@/data/gamesProvider';
     import { onMounted } from 'vue';
     import $ from 'jquery';
     import 'slick-carousel';
 
     // variables
-    const items = [
-        {
-            image: rummy,
-        },
-        {
-            image: ludo,
-        },
-        {
-            image: callbreak,
-        },
-        {
-            image: tambola,
-        },
-        {
-            image: poker,
-        },
-        {
-            image: rummy,
-        },
-        {
-            image: ludo,
-        },
-        {
-            image: callbreak,
-        },
-        {
-            image: tambola,
-        },
-        {
-            image: poker,
-        },
-        {
-            image: rummy,
-        },
-        {
-            image: ludo,
-        },
-        {
-            image: callbreak,
-        },
-        {
-            image: tambola,
-        },
-        {
-            image: poker,
-        },
     
-    ];
     
+    
+    // methods
     onMounted(() => {
         $('.card-slider-games').slick({
             dots: false,
             arrows: true,
-            slidesToShow: 5,
+            slidesToShow: 6,
             autoplay: true,
             infinite: true,
             responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1200,
+                settings: {
+                slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 992,
                 settings: {
                 slidesToShow: 3
                 }
             },
             {
-                breakpoint: 800,
+                breakpoint: 768,
                 settings: {
                 slidesToShow: 2
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 576,
                 settings: {
                 slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                slidesToShow: 1
                 }
             }
             ]
         });
     });
-  // methods
 </script>
 <template>
     <div class="row">
         <h5 class="text-white mb-3">Games Provider</h5>
         <div class="col-12">
             <div class="card-slider-games">
-                <div class="card bg-dark rounded-4 mb-3" v-for="(item,index) in items" :key="index">
+                <div class="card bg-dark rounded-4 mb-3" v-for="(item,id) in gameProvider.items" :key="id">
                     <div class="card-image-wrapper position-relative">
                         <img class="card-img-top w-100 rounded-4 img-fluid" :src="item.image" :alt="item.image">
                         <div class="overlay d-flex align-items-center justify-content-center">
