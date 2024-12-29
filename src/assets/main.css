@@ -117,11 +117,11 @@ body a {
       }
     }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
     #card-body-content-wrap{
-      font-size: 15px;
+      font-size: 13px;
       .game-info{
-        font-size:15px;
+        font-size:11px;
         padding:3px 5px;
       }
     }
