@@ -45,18 +45,18 @@ const routes = [
     path: '/my-wallet',
     name: 'Wallet',
     component: () => import("@/views/templates/mywallet/WalletPage.vue"),
-  }
+  },
 
   // {
   //   path: '/login',
   //   name: 'Login',
   //   component: () => import("@/views/templates/login/LoginPage.vue"),
   // },
-  // {
-  //   path: '/sign-up',
-  //   name: 'SignUpPage',
-  //   component: () => import("@/views/templates/login/SignUpPage.vue"),
-  // }
+  {
+    path: '/sign-up',
+    name: 'SignUpPage',
+    component: () => import("@/views/templates/sign-up/SignUpPage.vue"),
+  }
 
 ];
 

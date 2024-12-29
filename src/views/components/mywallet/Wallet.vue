@@ -62,40 +62,94 @@
     max-width: 500px;
     margin: 0 auto;
   }
-  
+
   .logo-img {
     height: 50px;
     object-fit: cover;
   }
-  
+
   .wallet-class {
-    margin: 0px 300px;
+    margin: 0 300px;
     background-color: black;
     box-shadow: 0 4px 6px rgba(108, 117, 125, 0.5); /* Corrected box-shadow with rgba color */
   }
-  
+
   .referral-text {
     font-size: 18px;
     font-weight: 500;
     margin-bottom: 15px;
     color: gray;
   }
-  
+
   .currency {
     font-size: 28px;
     font-weight: bold;
     color: white;
   }
-  
+
   .text-muted {
     font-size: 14px;
     color: #6c757d;
   }
-  
+
   .btn-warning {
     font-size: 20px;
     text-transform: uppercase;
     padding: 5px 50px;
   }
-  </style>
-  
+
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .wallet-class {
+      margin: 0 20px;
+    }
+
+    .referral-container {
+      padding: 15px;
+    }
+
+    .logo-img {
+      height: 40px;
+    }
+
+    .referral-text {
+      font-size: 16px;
+    }
+
+    .currency {
+      font-size: 24px;
+    }
+
+    .btn-warning {
+      font-size: 18px;
+      padding: 5px 30px;
+    }
+
+    /* Adjust button and input widths for smaller screens */
+    .container {
+      width: 100%;
+    }
+
+    /* Ensure card width is responsive */
+    .card {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  /* For smaller mobile screens */
+  @media (max-width: 480px) {
+    .referral-text {
+      font-size: 14px;
+    }
+
+    .currency {
+      font-size: 20px;
+    }
+
+    .btn-warning {
+      font-size: 16px;
+      padding: 5px 20px;
+    }
+  }
+</style>

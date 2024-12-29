@@ -3,6 +3,7 @@ import { useRouter } from 'vue-router';
 const router = useRouter();
 import logo from '@/assets/images/logo/logo.png';
 import profile from '@/assets/images/profile/alia.png';
+import LoginModal from '../components/login/LoginModal.vue';
 
 function goToHome() {
     router.push({ name: 'Home' });
@@ -18,7 +19,7 @@ function goToHome() {
       </router-link>
 
       <div class="profile-card-wrap d-flex  align-items-center ">
-        <div class="profile mx-3 px-3 py-1 bg-dark rounded-pill animate__animated animate__zoomIn" id="profile-card">
+        <!-- <div class="profile mx-3 px-3 py-1 bg-dark rounded-pill animate__animated animate__zoomIn" id="profile-card">
           <div class="d-flex justify-content-between align-items-center gap-2">
               <img id="profile" :src="profile" alt="profile-image">
               <div id="profile-content">
@@ -26,7 +27,14 @@ function goToHome() {
                   <strong class="currency fs-md fw-bold">৳5000</strong>
               </div>
           </div>
-        </div>
+        </div> -->
+
+        <button type="button" class="btn btn-danger me-2" data-bs-toggle="modal" data-bs-target="#loginBackdrop">
+          LOGIN
+        </button>
+
+        <LoginModal/>
+
         <div>
           <button
             class="navbar-toggler"
@@ -202,9 +210,8 @@ function goToHome() {
 .balance {
   font-size: 14px;
   font-weight: bold;
-  color: #00ff00; /* Green color for balance */
+  color: #00ff00;
   margin: 0;
 }
-
 
 </style>
