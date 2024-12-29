@@ -10,11 +10,11 @@ import profile from '@/assets/images/profile/alia.png';
   <nav class="navbar navbar-dark">
     <div class="container-fluid">
       <router-link class="navbar-brand" to="/">
-        <img id="logo" :src="logo" alt="logo">
+        <img id="logo" class="animate__animated animate__zoomIn" :src="logo" alt="logo">
       </router-link>
 
-      <div class="profile-card-wrap d-flex  align-items-center">
-        <div class="profile mx-3 px-3 py-1 bg-dark rounded-pill" id="profile-card">
+      <div class="profile-card-wrap d-flex  align-items-center ">
+        <div class="profile mx-3 px-3 py-1 bg-dark rounded-pill animate__animated animate__zoomIn" id="profile-card">
           <div class="d-flex justify-content-between align-items-center gap-2">
               <img id="profile" :src="profile" alt="profile-image">
               <div id="profile-content">
@@ -22,7 +22,7 @@ import profile from '@/assets/images/profile/alia.png';
                   <strong class="currency fs-md fw-bold">৳5000</strong>
               </div>
           </div>
-      </div>
+        </div>
         <div>
           <button
             class="navbar-toggler"

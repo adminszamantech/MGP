@@ -12,9 +12,9 @@
 <template>
 
     <div class="row header-menu px-0 px-md-2 d-none d-md-block">
-        <div class="col-md-12 shadow-sm ">
-        <ul class="list-unstyled d-flex justify-content-between align-items-center py-3">
-            <li class="d-flex align-items-center gap-2">
+        <div class="col-md-12">
+        <ul class="list-unstyled d-flex justify-content-between align-items-center py-3 animate__animated animate__zoomIn">
+            <li class="d-flex align-items-center gap-2 ">
                 <img id="icon" :src="chip" alt="chip">
                 <router-link class="text-decoration-none text-white fs-6 " to="/">
                     LUDO
