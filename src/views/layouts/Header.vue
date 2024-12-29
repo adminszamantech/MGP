@@ -1,8 +1,12 @@
 <script setup>
-
+import { useRouter } from 'vue-router';
+const router = useRouter();
 import logo from '@/assets/images/logo/logo.png';
 import profile from '@/assets/images/profile/alia.png';
 
+function goToHome() {
+    router.push({ name: 'Home' });
+  }
 
 </script>
 
@@ -68,7 +72,7 @@ import profile from '@/assets/images/profile/alia.png';
                     <i class="bi bi-house-door-fill me-2"></i>Home</router-link>
                 </li>
                 <li class="nav-item" data-bs-dismiss="offcanvas">
-                  <router-link class="nav-link active" aria-current="page" to="/" >
+                  <router-link class="nav-link active" aria-current="page" to="/my-wallet" >
                     <i class="bi bi-cash me-2"></i>MY WALLET</router-link>
                 </li>
                 <li class="nav-item" data-bs-dismiss="offcanvas">
@@ -92,18 +96,18 @@ import profile from '@/assets/images/profile/alia.png';
                   <router-link class="nav-link active" aria-current="page" to="/kyc">
                     <i class="bi bi-cash me-2"></i>KYC</router-link>
                 </li>
-                <li class="nav-item" data-bs-dismiss="offcanvas">
+                <!-- <li class="nav-item" data-bs-dismiss="offcanvas">
                   <router-link class="nav-link active" aria-current="page" to="/">
                     <i class="bi bi-cash me-2"></i>TDS</router-link>
-                </li>
+                </li> -->
                 <li class="nav-item" data-bs-dismiss="offcanvas">
                   <router-link class="nav-link active" aria-current="page" to="/my-invitation">
                     <i class="bi bi-cash me-2"></i>MY invitation</router-link>
                 </li>
-                <li class="nav-item" data-bs-dismiss="offcanvas">
+                <!-- <li class="nav-item" data-bs-dismiss="offcanvas">
                   <router-link class="nav-link active" aria-current="page" to="/">
                     <i class="bi bi-cash me-2"></i>promotions</router-link>
-                </li>
+                </li> -->
                 <li class="nav-item" data-bs-dismiss="offcanvas">
                   <router-link class="nav-link active" aria-current="page" to="/game-history">
                     <i class="bi bi-cash me-2"></i>Games History</router-link>
@@ -111,8 +115,13 @@ import profile from '@/assets/images/profile/alia.png';
               </ul>
             </div>
             <div class="d-grid col-4 mx-auto mb-4">
-              <button class="btn btn-danger" type="button">
-                <i class="bi bi-box-arrow-right me-2"></i> LOG OUT
+              <button 
+                data-bs-dismiss="offcanvas"
+                class="btn btn-danger" 
+                type="button"
+                @click="goToHome">
+                <i class="bi bi-box-arrow-right me-2"></i> 
+                LOG OUT
               </button>
             </div>
           </div>

@@ -105,8 +105,6 @@
         <div class="col-12">
             <NavTabItem/>
         </div>
-        
-        
     </div>
 </template>
 

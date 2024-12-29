@@ -41,6 +41,11 @@ const routes = [
     name: 'MyInvitation',
     component: () => import("@/views/templates/invitation/MyInvitationPage.vue"),
   },
+  {
+    path: '/my-wallet',
+    name: 'Wallet',
+    component: () => import("@/views/templates/mywallet/WalletPage.vue"),
+  }
 
   // {
   //   path: '/login',
