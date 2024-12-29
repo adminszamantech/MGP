@@ -5,77 +5,111 @@
     import callbreak from '@/assets/images/slider/call-break.webp';
     import tambola from '@/assets/images/slider/tambola.webp';
     import poker from '@/assets/images/slider/poker.webp';
-  // variables
-  const items = [
+    import { onMounted } from 'vue';
+    import $ from 'jquery';
+    import 'slick-carousel';
+
+    // variables
+    const items = [
         {
             image: rummy,
-            text:'Rummy'
         },
         {
             image: ludo,
-            text:'Ludo'
         },
         {
             image: callbreak,
-            text:'Call Break'
         },
         {
             image: tambola,
-            text:'Tambola'
         },
         {
             image: poker,
-            text:'Poker'
         },
         {
             image: rummy,
-            text:'Rummy'
         },
         {
             image: ludo,
-            text:'Ludo'
         },
         {
             image: callbreak,
-            text:'Call Break'
         },
         {
             image: tambola,
-            text:'Tambola'
         },
         {
             image: poker,
-            text:'Poker'
         },
-        
+        {
+            image: rummy,
+        },
+        {
+            image: ludo,
+        },
+        {
+            image: callbreak,
+        },
+        {
+            image: tambola,
+        },
+        {
+            image: poker,
+        },
     
     ];
+    
+    onMounted(() => {
+        $('.card-slider-games').slick({
+            dots: false,
+            arrows: true,
+            slidesToShow: 5,
+            autoplay: true,
+            infinite: true,
+            responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 800,
+                settings: {
+                slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                slidesToShow: 2
+                }
+            }
+            ]
+        });
+    });
   // methods
 </script>
 <template>
-    <div class="row ">
-        <hr class="my-4">
-
-        <h5 class="text-white mb-3">Skill Games</h5>
-       
-        <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2" v-for="(item, index) in items" :key="index">
-            <div class="card bg-dark rounded-4 mb-3 animate__animated animate__zoomIn">
-                <div class="card-image-wrapper position-relative">
-                    <img class="card-img-top w-100 rounded-4 img-fluid" :src="item.image" :alt="item.image">
-                    <div class="overlay d-flex align-items-center justify-content-center">
-                        <button class="play-btn btn btn-default">Play</button>
+    <div class="row">
+        <h5 class="text-white mb-3">Games Provider</h5>
+        <div class="col-12">
+            <div class="card-slider-games">
+                <div class="card bg-dark rounded-4 mb-3" v-for="(item,index) in items" :key="index">
+                    <div class="card-image-wrapper position-relative">
+                        <img class="card-img-top w-100 rounded-4 img-fluid" :src="item.image" :alt="item.image">
+                        <div class="overlay d-flex align-items-center justify-content-center">
+                            <button class="play-btn btn btn-default">View</button>
+                        </div>
                     </div>
                 </div>
-                <div class="card-body text-white d-flex justify-content-between" id="card-body-content-wrap">
-                    <strong class="">{{ item.text }}</strong>
-                    <a href="" class="game-info"><small>Game Info</small></a>
-                </div>
             </div>
-        </div> 
+        </div>
     </div>
-    <hr class="my-4">
 </template>
+
 <style scoped>
+
     .card-image-wrapper {
         position: relative;
     }
@@ -123,6 +157,4 @@
         cursor: pointer;
         transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     }
-
-
 </style>
