@@ -20,6 +20,7 @@
     "datatables.net-select": "^2.1.0",
     "datatables.net-select-dt": "^2.1.0",
     "datatables.net-vue3": "^3.0.3",
+    "nprogress": "^0.2.0",
     "pinia": "^2.3.0",
     "slick-carousel": "^1.8.1",
     "vue": "^3.5.13",

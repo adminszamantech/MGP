@@ -81,6 +81,14 @@ body a {
   padding-right: 10px;
 }
 
+#nprogress .bar {
+  height: 4px !important; 
+  background: #ff0000 !important; 
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px #ff0000, 0 0 5px #ff0000 !important; 
+}
 
 /* Media query for responsive */
 @media (max-width: 540px) {

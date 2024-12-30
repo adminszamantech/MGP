@@ -48,7 +48,7 @@ export const getCategory = {
         {
             id: 8,
             image: moneytransfer,
-            text: "INSTANT WIN",
+            text: "SERIES",
         },
         {
             id: 9,
