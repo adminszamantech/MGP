@@ -6,6 +6,7 @@ import { onMounted, ref } from "vue";
 import { getCategory } from "@/data/getCategory";
 import $ from "jquery";
 import "slick-carousel";
+
 // variables
 const categoryId = ref(null);
 
@@ -45,14 +46,17 @@ onMounted(() => {
     ],
   });
 });
+
 // methods
 function getItem(id) {
   categoryId.value = id;
 }
 </script>
+
 <template>
   <div class="row">
     <div class="col-12">
+      <!-- Card Slider -->
       <div class="card-slider">
         <div
           class="card bg-dark text-white text-center py-2"
@@ -65,15 +69,16 @@ function getItem(id) {
             <img
               width="22px"
               height="22px"
-              class=""
               :src="item.image"
-              :alt="item.image"
+              :alt="item.text"
             />
           </div>
           <small>{{ item.text }}</small>
         </div>
       </div>
     </div>
+
+    <!-- NavTabItem and GamesProvider Components -->
     <div class="col-12">
       <NavTabItem :categoryId="categoryId" />
     </div>
@@ -98,11 +103,11 @@ function getItem(id) {
   background: #c72b2c !important;
   cursor: pointer;
 }
-.slick-slide{
+
+.slick-slide {
   .card-active {
     background: #c72b2c !important;
     cursor: pointer;
   }
 }
-
 </style>
