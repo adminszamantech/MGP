@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import DataTable from 'datatables.net-vue3';
 import DataTablesCore from 'datatables.net-bs5';
+import 'datatables.net-select-dt';
+import 'datatables.net-responsive-dt';
 
 DataTable.use(DataTablesCore);
 
@@ -13,12 +15,18 @@ const columns = [
   { data: 'salary' },
 ];
 
+const options = {
+  responsive: true,
+  select: true,
+};
+
 </script>
 
 <template>
   <div class="container">
     <DataTable
       :columns="columns"
+      :options="options"
       ajax="/data.json"
       class="table table-hover table-striped"
       width="100%"
