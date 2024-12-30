@@ -61,7 +61,7 @@
                     <div class="card-image-wrapper position-relative">
                         <img class="card-img-top w-100 rounded-4 img-fluid" :src="item.image" :alt="item.image">
                         <div class="overlay d-flex align-items-center justify-content-center">
-                            <button class="play-btn btn btn-default">View</button>
+                            <button class="play-btn btn btn-default"><strong>View</strong></button>
                         </div>
                     </div>
                 </div>
