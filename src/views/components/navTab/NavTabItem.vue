@@ -32,26 +32,8 @@ onMounted(() => {
         <div class="card-image-wrapper position-relative">
           <div class="skeleton skeleton-image"></div>
         </div>
-<<<<<<< HEAD
-
-        <!-- Actual content -->
-        <div v-else class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2" v-for="(item, id) in gameItems.items" :key="'game-' + id">
-            <div class="card bg-dark rounded-4 mb-3 animate__animated animate__zoomIn">
-                <div class="card-image-wrapper position-relative">
-                    <img class="card-img-top w-100 rounded-4 img-fluid" :src="item.image" :alt="item.text">
-                    <div class="overlay d-flex align-items-center justify-content-center">
-                        <button class="play-btn btn btn-default">Play</button>
-                    </div>
-                </div>
-                <div class="card-body text-white d-flex justify-content-between" id="card-body-content-wrap">
-                    <strong class="">{{ item.text }}</strong>
-                    <a href="" class="game-info"><small>Game Info</small></a>
-                </div>
-            </div>
-=======
         <div class="card-body text-white d-flex justify-content-between">
           <div class="skeleton skeleton-text"></div>
->>>>>>> 9cfbe3cbf9d0a9eea5ed572dbe4676a9f807b7f9
         </div>
       </div>
     </div>

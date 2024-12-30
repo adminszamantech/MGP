@@ -15,7 +15,7 @@ export const gameItems = {
         },
         {
             id: 2, 
-            url: 'https://poki.com/en/g/ludo-multiplayer',
+            url: 'https://ludo.avinashv.dev/',
             image: ludo,
             text:'Ludo'
         },
