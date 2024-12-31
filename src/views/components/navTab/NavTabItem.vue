@@ -1,29 +1,43 @@
 <script setup>
 // imports
-import { gameItems } from "@/data/gameItems";
-import { ref, onMounted } from "vue";
-
+import { useGameStore } from "@/stores/useGameStore";
+import { onMounted, watch } from "vue";
+import rummy from "@/assets/images/slider/rummy.webp";
 // variables
-const loading = ref(true);
+const gameStore = useGameStore();
 const { categoryId } = defineProps({
   categoryId: Number,
 });
 
+// methods
+const fetchGames = async (id) => {
+  try {
+    await gameStore.fetchGame(id);
+  } catch (e) {
+    console.error(e);
+  }
+};
+
 onMounted(() => {
-  setTimeout(() => {
-    loading.value = false;
-  }, 1000);
+  fetchGames(categoryId);
 });
+
+watch(
+  () => categoryId,
+  (newCategoryId) => {
+    fetchGames(newCategoryId);
+  }
+);
 </script>
 
 <template>
   <div class="row">
     <hr class="my-4" />
-    <h5 class="text-white mb-3">Skill Games {{ categoryId }}</h5>
+    <h5 class="text-white mb-3">Skill Games</h5>
 
     <!-- Loading content -->
     <div
-      v-if="loading"
+      v-if="gameStore.isLoading"
       class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2"
       v-for="(item, id) in 6"
       :key="'loading-' + id"
@@ -42,14 +56,16 @@ onMounted(() => {
     <div
       v-else
       class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2"
-      v-for="(item, id) in gameItems.items"
+      v-for="(item, id) in gameStore.games"
       :key="'game-' + id"
     >
-      <div class="card bg-dark rounded-4 mb-3 animate__animated animate__zoomIn">
+      <div
+        class="card bg-dark rounded-4 mb-3 animate__animated animate__zoomIn text-white"
+      >
         <div class="card-image-wrapper position-relative">
           <img
             class="card-img-top w-100 rounded-4 img-fluid"
-            :src="item.image"
+            :src="rummy"
             :alt="item.text"
           />
           <div class="overlay d-flex align-items-center justify-content-center">
