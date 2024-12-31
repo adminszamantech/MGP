@@ -120,6 +120,10 @@ function goToHome() {
                   <router-link class="nav-link active" aria-current="page" to="/game-history">
                     <i class="bi bi-cash me-2"></i>Games History</router-link>
                 </li>
+                <li class="nav-item" data-bs-dismiss="offcanvas">
+                  <router-link class="nav-link active" aria-current="page" to="/player">
+                    <i class="bi bi-cash me-2"></i>Video Player</router-link>
+                </li>
               </ul>
             </div>
             <div class="d-grid col-4 mx-auto mb-4">

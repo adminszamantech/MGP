@@ -47,6 +47,12 @@ const routes = [
     component: () => import("@/views/templates/mywallet/WalletPage.vue"),
   },
 
+  {
+    path: '/player',
+    name: 'PlayZone',
+    component: () => import("@/views/templates/player_zone/PlayZone.vue"),
+  },
+
   // {
   //   path: '/login',
   //   name: 'Login',
