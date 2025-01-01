@@ -4,12 +4,13 @@
       <!-- Video Player -->
       <div class="col-12 col-lg-8 video-player-container">
         <VueVideoPlayer
+          ref="videoPlayer"
           :videoSrc="selectedVideoSrc"
           :poster="selectedVideoPoster"
-          :key="selectedVideoSrc"
+          :autoplay="true"
         />
         <div class="title">
-            <p>{{ selectedVideoTitle }}</p>
+          <p>{{ selectedVideoTitle }}</p>
         </div>
       </div>
 
@@ -28,15 +29,11 @@
           </div>
         </div>
       </div>
-      
     </div>
-    
   </div>
   <hr class="my-4" />
-  <GamesProvider/>
+  <GamesProvider />
 </template>
-
-
 
 <script setup lang="ts">
 import { ref } from 'vue';
@@ -44,6 +41,7 @@ import VueVideoPlayer from '@/views/components/player/VideoPlayer.vue';
 import oceansPoster from '@/assets/poster/oceans.png'; 
 import GamesProvider from "@/views/components/home/GamesProvider.vue";
 
+// Playlist data
 const playlist = [
   {
     title: 'Best Of Arijit Singh || সেরা ১০ টি গান অরিজিৎ সিং || Bengal Song || অরিজিৎ সিং এর গান ',
@@ -72,16 +70,21 @@ const playlist = [
   }
 ];
 
+// Selected video data
 const selectedVideoSrc = ref(playlist[0].src);
 const selectedVideoPoster = ref(playlist[0].poster);
 const selectedVideoTitle = ref(playlist[0].title);
 
+// Video player reference
+const videoPlayer = ref(null);
+
 // Handle video selection from playlist
-const onVideoSelect = (video: { src: string, poster: string }) => {
+const onVideoSelect = (video: { src: string, poster: string, title: string }) => {
   selectedVideoSrc.value = video.src;
   selectedVideoPoster.value = video.poster;
-  selectedVideoTitle.value = video.title; 
+  selectedVideoTitle.value = video.title;
 };
+
 </script>
 
 <style scoped>
@@ -157,12 +160,12 @@ h4 {
   }
 
   .thumbnail {
-    width: 100px; 
+    width: 100px;
     height: 100px;
   }
 
   .playlist-title {
-    font-size: 12px; 
+    font-size: 12px;
     width: auto;
   }
 
@@ -171,4 +174,3 @@ h4 {
   }
 }
 </style>
-
