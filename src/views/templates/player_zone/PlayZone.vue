@@ -36,17 +36,18 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import VueVideoPlayer from '@/views/components/player/VideoPlayer.vue';
+import oceansPoster from '@/assets/poster/oceans.png'; 
 
 const playlist = [
   {
-    title: 'Best Of Arijit Singh || সেরা ১০ টি গান অরিজিৎ সিং || Bengal Song || অরিজিৎ সিং এর গান ||',
+    title: 'Best Of Arijit Singh || সেরা ১০ টি গান অরিজিৎ সিং || Bengal Song || অরিজিৎ সিং এর গান ',
     src: 'https://d2zihajmogu5jn.cloudfront.net/elephantsdream/ed_hd.mp4',
     poster: 'https://via.placeholder.com/100',
   },
   {
     title: 'Tui Chunli Jakhan - Full Video | Samantaral | Arijit Singh & Shreya Ghoshal | Riddhi S & Surangana B',
     src: 'https://vjs.zencdn.net/v/oceans.mp4',
-    poster: 'https://via.placeholder.com/150',
+    poster: oceansPoster,
   },
   {
     title: 'Video 3',
@@ -118,8 +119,11 @@ h4 {
 
 .playlist-title {
   color: #fff;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
+  width: 240px; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
 }
 .title{
     margin-top: 10px;

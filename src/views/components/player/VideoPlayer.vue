@@ -2,6 +2,7 @@
   <video-player
     class="video-player vjs-big-play-centered"
     :src="videoSrc"
+    :poster="poster"
     crossorigin="anonymous"
     playsinline
     controls
