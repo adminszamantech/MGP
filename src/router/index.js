@@ -53,6 +53,30 @@ const routes = [
     component: () => import("@/views/templates/player_zone/PlayZone.vue"),
   },
 
+  {
+    path: '/promotions',
+    name: 'Promotions',
+    component: () => import("@/views/templates/promotions/PromotionPage.vue"),
+  },
+ 
+  {
+    path: '/contact-us',
+    name: 'ContactUs',
+    component: () => import("@/views/templates/contactus/ContactPage.vue"),
+  },
+
+  {
+    path: '/privacy-policy',
+    name: 'PrivacyPolicy',
+    component: () => import("@/views/templates/privacy_policy/PrivacyPolicyPage.vue"),
+  },
+
+  {
+    path: '/terms-conditions',
+    name: 'TermsConditions',
+    component: () => import("@/views/templates/termsCondistions/TermsConditionPage.vue"),
+  },
+
   // {
   //   path: '/login',
   //   name: 'Login',

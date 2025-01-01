@@ -1,8 +1,8 @@
-
 <template>
   <div class="container mt-4">
     <div class="row">
-      <div class="col-lg-8 video-player-container">
+      <!-- Video Player -->
+      <div class="col-12 col-lg-8 video-player-container">
         <VueVideoPlayer
           :videoSrc="selectedVideoSrc"
           :poster="selectedVideoPoster"
@@ -13,8 +13,8 @@
         </div>
       </div>
 
-      <!-- Right Side: Playlist -->
-      <div class="col-lg-4 playlist-container">
+      <!-- Playlist -->
+      <div class="col-12 col-lg-4 playlist-container">
         <h4>Playlist</h4>
         <div
           v-for="(video, index) in playlist"
@@ -28,15 +28,21 @@
           </div>
         </div>
       </div>
+      
     </div>
+    
   </div>
+  <hr class="my-4" />
+  <GamesProvider/>
 </template>
+
 
 
 <script setup lang="ts">
 import { ref } from 'vue';
 import VueVideoPlayer from '@/views/components/player/VideoPlayer.vue';
 import oceansPoster from '@/assets/poster/oceans.png'; 
+import GamesProvider from "@/views/components/home/GamesProvider.vue";
 
 const playlist = [
   {
@@ -52,17 +58,17 @@ const playlist = [
   {
     title: 'Video 3',
     src: 'https://dash.akamaized.net/dash264/TestCasesIOP33/adapatationSetSwitching/5/manifest.mpd',
-    poster: 'https://via.placeholder.com/150',
+    poster: 'https://via.placeholder.com/100',
   },
   {
     title: 'Video 4',
     src: 'https://vjs.zencdn.net/v/oceans.mp4',
-    poster: 'https://via.placeholder.com/150',
+    poster: 'https://via.placeholder.com/100',
   },
   {
     title: 'Video 5',
     src: 'https://vjs.zencdn.net/v/oceans.mp4',
-    poster: 'https://via.placeholder.com/150',
+    poster: 'https://via.placeholder.com/100',
   }
 ];
 
@@ -121,15 +127,48 @@ h4 {
   color: #fff;
   font-size: 14px;
   font-weight: 500;
-  width: 240px; 
-  overflow: hidden; 
-  text-overflow: ellipsis; 
+  width: 240px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.title{
-    margin-top: 10px;
-    font-size: 18px;
-    background-color: #22252a;
+
+.title {
+  margin-top: 10px;
+  font-size: 18px;
+  background-color: #22252a;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .video-player-container {
+    margin-bottom: 20px; /* Space between video and playlist */
+  }
+
+  .col-lg-8, .col-lg-4 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .playlist-container {
     padding: 10px;
-    border-radius: 10px;
+    box-shadow: none;
+  }
+
+  .thumbnail {
+    width: 100px; 
+    height: 100px;
+  }
+
+  .playlist-title {
+    font-size: 12px; 
+    width: auto;
+  }
+
+  .title {
+    font-size: 16px;
+  }
 }
 </style>
+

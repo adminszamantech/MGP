@@ -24,7 +24,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, ref } from 'vue';
+import { defineProps } from 'vue';
 import { VideoPlayer } from '@videojs-player/vue';
 import 'video.js/dist/video-js.css';
 
@@ -54,5 +54,16 @@ const handleMounted = (event: any) => {
   box-shadow: 0 4px 10px rgba(207, 207, 207, 0.2);
   height: 500px;
   width: 850px;
+  margin: 0 auto; /* Center the video player */
 }
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .video-player {
+    width: 100%; /* Full width on mobile */
+    height: 200px; /* Maintain aspect ratio */
+    max-height: 350px; /* Limit the height to avoid large players */
+  }
+}
+
 </style>
